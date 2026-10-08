@@ -7,7 +7,7 @@
 
   AI-assisted localization for Lua, JSON, JavaScript, and TypeScript files—without accounts, dashboards, or damaged placeholders.
 
-  [Live app](https://localeforge.vercel.app) · [Open translator](https://localeforge.vercel.app/translate) · [Report an issue](https://github.com/HastH8/LocaleForge/issues)
+  [Live app](https://locale.hastherish.com) · [Open translator](https://locale.hastherish.com/translate) · [Report an issue](https://github.com/HastH8/LocaleForge/issues)
 
   ![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs)
   ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)
