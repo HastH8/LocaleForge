@@ -73,6 +73,7 @@ The in-memory rate limiter is intentionally simple. For a high-traffic productio
 | Highlighting | Shiki and Code Blocks components |
 | Flags | `country-flag-icons` |
 | Translation | Google Gen AI SDK and Gemini Interactions API |
+| Analytics | Vercel Web Analytics, loaded after visitor consent |
 | Archive export | JSZip |
 | Deployment | Vercel |
 
@@ -229,6 +230,7 @@ After connecting a custom domain, submit `/sitemap.xml` in Google Search Console
 ## Privacy and security notes
 
 - LocaleForge does not require an account or maintain a translation-history database.
+- Vercel Web Analytics loads only after a visitor chooses **Accept all** in the cookie notice.
 - Source files and generated text pass through the application server and the configured Gemini API to complete a request.
 - The application requests `store: false` from the Gemini Interactions API.
 - Do not submit credentials, secrets, regulated personal data, or source code you are not authorized to process.

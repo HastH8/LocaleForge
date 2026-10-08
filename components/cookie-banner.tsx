@@ -4,22 +4,25 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Cookie } from "lucide-react"
 
+import {
+  COOKIE_CONSENT_EVENT,
+  COOKIE_CONSENT_KEY,
+} from "@/components/consented-analytics"
 import { Button } from "@/components/ui/button"
-
-const CONSENT_KEY = "localeforge-cookie-consent"
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      setVisible(!window.localStorage.getItem(CONSENT_KEY))
+      setVisible(!window.localStorage.getItem(COOKIE_CONSENT_KEY))
     })
     return () => window.cancelAnimationFrame(frame)
   }, [])
 
   function choose(value: "essential" | "all") {
-    window.localStorage.setItem(CONSENT_KEY, value)
+    window.localStorage.setItem(COOKIE_CONSENT_KEY, value)
+    window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT))
     setVisible(false)
   }
 

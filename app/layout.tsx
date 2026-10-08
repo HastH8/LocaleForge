@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Manrope } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { CookieBanner } from "@/components/cookie-banner"
+import { ConsentedAnalytics } from "@/components/consented-analytics"
 import { Toaster } from "@/components/ui/toast"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { absoluteUrl, siteConfig } from "@/lib/site"
@@ -142,6 +143,7 @@ export default function RootLayout({
           <TooltipProvider>
             {children}
             <CookieBanner />
+            <ConsentedAnalytics />
             <Toaster />
           </TooltipProvider>
         </ThemeProvider>
